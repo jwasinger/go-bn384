@@ -1,0 +1,6 @@
+github.com/jwasinger/uint128 v1.0.1-0.20201001043151-a8dabf9d0bc8 h1:WkWvP61bPC/WR0jw/MiSkZRM3oMOTKT3Xxk7BBCrPac=
+github.com/jwasinger/uint128 v1.0.1-0.20201001043151-a8dabf9d0bc8/go.mod h1:xYEyGcluzkdV3w68xd/XiXHG7ZOGtu6DaHwa/l831bo=
+github.com/jwasinger/uint128 v1.0.1-0.20201007033633-ebe1c13de682 h1:GmQDZr1eUrcHQAjVpeoGUw+G6P7T2D0r7f1YsTw7IkM=
+github.com/jwasinger/uint128 v1.0.1-0.20201007033633-ebe1c13de682/go.mod h1:xYEyGcluzkdV3w68xd/XiXHG7ZOGtu6DaHwa/l831bo=
+lukechampine.com/uint128 v1.0.0 h1:764JS75JmwLi/UhTymgwwrculJqTvERJJDZ7GkUmt0c=
+lukechampine.com/uint128 v1.0.0/go.mod h1:c4eWIwlEGaxC/+H1VguhU4PHXNWDCDMUlWdIWl2j1gk=
