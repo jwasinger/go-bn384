@@ -83,15 +83,10 @@ func MulMod(out *Element, x *Element, y *Element, mod *Element, inv uint64) {
 
 		carry = 0
 		for j := 0; j < NUM_LIMBS; j++ {
-			xiyj.Lo = x[i]
-			xiyj.Hi = 0
 
-			xiyj = xiyj.Mul64(y[j])
+			xiyj.Hi, xiyj.Lo = bits.Mul64(x[i], y[j])
 
-			uimj.Lo = ui
-			uimj.Hi = 0
-
-			uimj = uimj.Mul64(mod[j])
+			uimj.Hi, uimj.Lo = bits.Mul64(ui, mod[j])
 
 			partial_sum = xiyj.Add64(carry)
 			sum = uimj.Add64(A[i + j])
