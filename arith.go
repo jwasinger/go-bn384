@@ -67,6 +67,15 @@ func SubMod(out *Element, x *Element, y *Element, mod *Element) {
 	}
 }
 
+// return True if a < b, else False
+func LT(a_hi, a_lo, b_hi, b_lo uint64) bool {
+	if a_hi < b_hi || (a_hi == b_hi && a_lo < b_lo) {
+		return true
+	} else {
+		return false
+	}
+}
+
 /*
 	Montgomery Modular Multiplication: algorithm 14.36, Handbook of Applied Cryptography, http://cacr.uwaterloo.ca/hac/about/chap14.pdf
 */
@@ -95,7 +104,7 @@ func MulMod(out *Element, x *Element, y *Element, mod *Element, inv uint64) {
 			A[i + j] = sum.Lo
 			carry = sum.Hi
 
-			if sum.Cmp(partial_sum) == -1 {
+			if LT(sum.Hi, sum.Lo, partial_sum.Hi, partial_sum.Lo) {
 				var k int
 				k = 2
 				for ; i + j + k < NUM_LIMBS * 2 && A[i + j + k] == ^uint64(0); {
